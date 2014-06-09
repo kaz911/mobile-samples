@@ -14,11 +14,11 @@ Given(/^I am on the Task Details screen for the "(.*?)" task$/) do |task_key|
     @current_page = @current_page.add_new_task(task)
   end
 
-  @current_page = @current_page.select_task(task[:name])
+  @current_page = @current_page.select_task_with_name(task[:name])
 end
 
 Given(/^I look at the details for the task "(.*?)"$/) do |task_name|
-  @current_page = @current_page.select_task(task_name)
+  @current_page = @current_page.select_task_with_name(task_name)
 end
 
 When(/^I add the "(.*?)" task$/) do |task_name|
@@ -31,7 +31,7 @@ Then(/^I should be on the TaskyPro screen$/) do
 end
 
 Then(/^I should see the "(.*?)" task in the list$/) do |task_name|
-  @current_page.assert_should_have_in_list(task_name)
+  @current_page.assert_task_name_should_be_in_list(task_name)
 end
 
 Then(/^I should see "(.*?)" for the note$/) do |task_note|

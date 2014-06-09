@@ -11,12 +11,12 @@ class TaskDetailsScreen < Calabash::ABase
     "edittext id:'txtNotes'"
   end
 
-  def cancel_button
-    "button marked:'Cancel'"
+  def home_button
+    "ImageView marked:'home'"
   end
 
   def delete_button
-    "button marked:'Delete'"
+    "ActionMenuItemView marked:'menu_delete_task'"
   end
 
   def save_button
@@ -24,11 +24,11 @@ class TaskDetailsScreen < Calabash::ABase
   end
 
   def trait
-    "button marked:'Save'"
+    "ActionMenuItemView marked:'menu_save_task'"
   end
 
   def done_checkbox
-    "checkbox marked:'Done'"
+    "checkbox marked:'chkDone'"
   end
 
   def change_name(new_name)
@@ -65,7 +65,7 @@ class TaskDetailsScreen < Calabash::ABase
   end
 
   def tap_cancel_button
-    touch(cancel_button)
+    touch(home_button)
   end
 
   def tap_delete_button
