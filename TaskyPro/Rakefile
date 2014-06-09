@@ -24,10 +24,7 @@ def get_env(key)
 end
 
 # Specify the device to use (in case there are multiple devices attached to computer)
-#set_env(:adb_device_arg, '192.168.56.101:5555') # Genymotion, Galaxy S4 w/Android 4.2.2
-#set_env(:adb_device_arg, 'HT9CXP812164')        # Hardware, Nexus One
-#set_env(:adb_device_arg, '0149B2EC03012005')    # Hardware, Galaxy Nexus
-set_env(:adb_device_arg, '192.168.56.102:5555') # Genymotion, Nexus 4 w/Android 4.3
+set_env(:adb_device_arg, '192.168.56.101:5555') # Genymotion, Nexus 4 w/Android 4.3
 
 task :default => [:clean, :build]
 
@@ -46,8 +43,13 @@ task :clean => [:clean_screenshots] do
   }
 end
 
+task :build => [:build_android, "build_ios"] do
+
+end
+
 desc "Delete the existing screen shots and calabash reports."
 task :clean_screenshots do
+
   directories_to_delete = [
       "./screenshots/",
   ]
@@ -59,7 +61,7 @@ end
 
 desc "Compiles a Release version of the project for Android."
 xbuild :build_android => [:clean] do |csproject|
-  csproject.solution = "./Tasky.Android/Tasky.Android.csproj"
+  csproject.solution = "./Tasky.Droid/Tasky.Droid.csproj"
   csproject.properties = {:configuration => :release}
   csproject.targets [:Clean, :Build, :SignAndroidPackage]
 end
