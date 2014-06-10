@@ -32,3 +32,5 @@ MWC/MWC.Core.WP7/Bin/Debug/*
 /TaskyPro/screenshots/
 
 /TaskyPro/.bundle/
+
+/TaskyPro/android-testcloud.sh
