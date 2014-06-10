@@ -68,6 +68,6 @@ end
 
 desc "Compiles the project for iOS"
 task :build_ios => [:clean] do
-  `/Applications/Xamarin\\ Studio.app/Contents/MacOS/mdtool -v build "--configuration:Debug|iPhone" TaskyPro.sln`
+  #`/Applications/Xamarin\\ Studio.app/Contents/MacOS/mdtool -v build "--configuration:Debug|iPhone" TaskyPro.sln`
   `/Applications/Xamarin\\ Studio.app/Contents/MacOS/mdtool -v build "--configuration:Debug|iPhoneSimulator" TaskyPro.sln`
 end
