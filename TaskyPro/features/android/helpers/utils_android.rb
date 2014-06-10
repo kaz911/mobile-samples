@@ -5,7 +5,7 @@ module TaskyPro
     end
 
     def clear_text(uiquery)
-      enter_text(uiquery, "")
+      query(uiquery, {:setText=> "" })
     end
   end
 end
