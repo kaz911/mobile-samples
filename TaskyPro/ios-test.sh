@@ -1,2 +1,2 @@
 #!/bin/bash
-calabash-ios run -p ios6
+calabash-ios run -p ios

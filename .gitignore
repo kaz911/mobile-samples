@@ -34,3 +34,6 @@ MWC/MWC.Core.WP7/Bin/Debug/*
 /TaskyPro/.bundle/
 
 /TaskyPro/android-testcloud.sh
+
+/TaskyPro/Calabash/
+/TaskyPro/calabash.framework/
