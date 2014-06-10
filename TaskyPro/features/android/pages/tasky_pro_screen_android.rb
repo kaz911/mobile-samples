@@ -26,7 +26,7 @@ class TaskyProScreen < Calabash::ABase
   end
 
   def task_with_name(task_name)
-    "LinearLayout TextView marked:'#{task_name}'"
+    "LinearLayout TextView text:'#{task_name}'"
   end
 
   def select_task_with_name(task_name)
@@ -35,7 +35,11 @@ class TaskyProScreen < Calabash::ABase
   end
 
   def is_checked(task_name)
-    item = query("ImageView marked:''")
+    # This is a verbose query - we first find the TextView holding our task name, then we look for the parent layout
+    # which should be LinearLayout. The ImageView holding the check mark is a sibling to this LinearLayout. We can
+    # find this out by using Android Device Monitor and then switching to the Hierarchy Viewer.
+
+    item = query("TextView text:'#{task_name}' parent LinearLayout sibling ImageView marked:'checkMark'")
     raise "Task #{task_name} is not checked, and it should be." unless item[0]
   end
 

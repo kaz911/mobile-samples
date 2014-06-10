@@ -1,5 +1,5 @@
 When(/^I change the name to "(.*?)"$/) do |new_name|
-  @current_age.change_name(new_name)
+  @current_page.change_name(new_name)
   @current_page = page(TaskyProScreen).await
 end
 
