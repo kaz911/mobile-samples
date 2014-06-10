@@ -31,7 +31,13 @@ task :clean => [:clean_screenshots] do
       "./obj",
       "./screenshots",
       "./test_servers",
-      "./testresults.html"
+      "./testresults.html",
+      "./Tasky.iOS/bin",
+      "./Tasky.iOS/obj",
+      "./Tasky.Droid/bin",
+      "./Tasky.Droid/obj",
+      "./Tasky.Core/bin",
+      "./Tasky.Core/obj"
   ]
 
   directories_to_delete.each { |x|
