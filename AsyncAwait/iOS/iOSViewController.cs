@@ -157,6 +157,11 @@ namespace iOS
 			// Return true for supported orientations
 			return (toInterfaceOrientation == UIInterfaceOrientation.Portrait);
 		}
+
+partial void GetButton_TouchUpInside (UIButton sender)
+{
+	
+}
 	}
 }
 

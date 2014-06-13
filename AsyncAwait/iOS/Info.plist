@@ -18,5 +18,11 @@
 	<string>AsyncAwait</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.kazcow.AsyncAwait</string>
+	<key>CFBundleShortVersionString</key>
+	<string></string>
+	<key>NSMainNibFile</key>
+	<string></string>
 </dict>
 </plist>

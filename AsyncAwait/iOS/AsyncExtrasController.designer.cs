@@ -1,10 +1,12 @@
 // WARNING
 //
-// This file has been generated automatically by Xamarin Studio to store outlets and
-// actions made in the UI designer. If it is removed, they will be lost.
-// Manual changes to this file may not be handled correctly.
+// This file has been generated automatically by Xamarin Studio from the outlets and
+// actions declared in your storyboard file.
+// Manual changes to this file will not be maintained.
 //
+using System;
 using MonoTouch.Foundation;
+using MonoTouch.UIKit;
 using System.CodeDom.Compiler;
 
 namespace iOS
@@ -13,45 +15,46 @@ namespace iOS
 	partial class AsyncExtrasController
 	{
 		[Outlet]
-		MonoTouch.UIKit.UIButton CancelButton { get; set; }
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton CancelButton { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIProgressView ProgressBar { get; set; }
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIProgressView ProgressBar { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UITextView ProgressTextView { get; set; }
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITextView ProgressTextView { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIButton StartButton { get; set; }
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton StartButton { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UITextView StatusTextView { get; set; }
-		
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITextView StatusTextView { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
-			if (ProgressTextView != null) {
-				ProgressTextView.Dispose ();
-				ProgressTextView = null;
-			}
-
-			if (ProgressBar != null) {
-				ProgressBar.Dispose ();
-				ProgressBar = null;
-			}
-
-			if (StatusTextView != null) {
-				StatusTextView.Dispose ();
-				StatusTextView = null;
-			}
-
 			if (CancelButton != null) {
 				CancelButton.Dispose ();
 				CancelButton = null;
 			}
-
+			if (ProgressBar != null) {
+				ProgressBar.Dispose ();
+				ProgressBar = null;
+			}
+			if (ProgressTextView != null) {
+				ProgressTextView.Dispose ();
+				ProgressTextView = null;
+			}
 			if (StartButton != null) {
 				StartButton.Dispose ();
 				StartButton = null;
+			}
+			if (StatusTextView != null) {
+				StatusTextView.Dispose ();
+				StatusTextView = null;
 			}
 		}
 	}
